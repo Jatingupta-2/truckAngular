@@ -1,0 +1,13 @@
+<div style="text-align: center"><br><br>
+  Vehicle Distance Calculator
+  <br><br><br><br>
+Please Select the Vehicle Number
+<select [(ngModel)]="selectedValue" name="abc">
+  <option *ngFor="let c of truckArray" [ngValue]="c.VehicleNo">{{c.VehicleNo}}</option>
+</select><br><br>
+Enter Latitude <input type="text" [(ngModel)]="lat"><br><br>
+Enter Longitude <input type="text" [(ngModel)]="long"><br><br>
+<button type="button" class="btn btn-primary" (click)="getDistance()">Get Distance</button><br><br>
+Distance : 
+<div *ngIf="display!=undefined">{{display.distance}} {{display.unit}}</div>
+</div>
